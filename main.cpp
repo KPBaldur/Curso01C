@@ -3,14 +3,12 @@
 using namespace std;
 
 int main() {
-    int edad = 0;
-    edad = 28;
-    const char letra = 'A';
-    int lista_edades[] = { 18, 10, 25};
-    cout <<  edad << endl;
-    cout << letra << endl;
-    cout << lista_edades[ 1 ];
+    int a = 2;
+    int b = 3;
+    bool c = a < b;
+    cout << c;
 }
+
 
 
 /*
@@ -53,4 +51,17 @@ Short Int
 Unsign Int
 
 Long Double
+
+Clase05 
+# Operadores de C++
+
+Aritméticos:  + - * / %
+
+Comparación: == < > >= <=
+
+Asignación: = += -= *= /= ++  --
+
+Lógicos: && || !
+
+Otros: sizeof <<>>
 */
