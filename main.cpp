@@ -3,10 +3,16 @@
 using namespace std;
 
 int main() {
-    int a = 2;
-    int b = 3;
-    int c = a+=1;
-    cout << c;
+    int edad = 0;
+    cout << "edad: ";
+    cin >> edad;
+    if (edad < 18) {
+        cout <<"No puedes votar";
+    } else if (edad > 40) {
+        cout << "No puedes votar";
+    } else {    
+        cout << "Puedes votar";
+    }
 }
 
 
