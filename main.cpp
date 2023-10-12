@@ -3,19 +3,12 @@
 using namespace std;
 
 int main() {
-    int option = 0;
-    cout << "Introduce una opcion: ";
-    cin >> option;
-    switch (option) {
-    case 1:
-        cout << "Opcion 1 seleccionada";
-        break;
-    case 2:
-        cout << "Opcion 2 seleccionada";
-        break;
-    default:
-        cout << "Esta opcion no existe";
-        break;
+    int lista[] = { 100, 200, 300 };
+    int limite = 0;
+    cout << "Limite de nuestro for: ";
+    cin >> limite;
+    for (int i = 0; i <= limite; i += 1) {
+        cout << lista[i] << endl;
     }
 }
 
