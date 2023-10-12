@@ -3,15 +3,19 @@
 using namespace std;
 
 int main() {
-    int edad = 0;
-    cout << "edad: ";
-    cin >> edad;
-    if (edad < 18) {
-        cout <<"No puedes votar";
-    } else if (edad > 40) {
-        cout << "No puedes votar";
-    } else {    
-        cout << "Puedes votar";
+    int option = 0;
+    cout << "Introduce una opcion: ";
+    cin >> option;
+    switch (option) {
+    case 1:
+        cout << "Opcion 1 seleccionada";
+        break;
+    case 2:
+        cout << "Opcion 2 seleccionada";
+        break;
+    default:
+        cout << "Esta opcion no existe";
+        break;
     }
 }
 
