@@ -14,11 +14,13 @@ public:
     ~Persona(){
         cout << "destructor" << endl;
     }
-    void establecerNombre(string nombre) {
+    Persona &establecerNombre(string nombre) {
         this->nombre = nombre;
+        return *this;
     }
-    void establecerEdad(int edad) {
+    Persona &establecerEdad(int edad) {
         this->edad = edad;
+        return *this;
     }
     void saludar() {
         cout << "Hola soy " << nombre << ", mi edad es " << edad << endl;
@@ -32,8 +34,7 @@ int main() {
     Persona *p2 = new Persona("Ximena", 26);
     */
 
-    p->establecerNombre("Ximena");
-    p->establecerEdad(26);
+    p->establecerNombre("Ximena").establecerEdad(26);
 
     p -> saludar();
     
