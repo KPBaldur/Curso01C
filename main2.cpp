@@ -3,26 +3,41 @@
 using namespace std;
 
 class Persona {
-public:
+private:
     string nombre;
     int edad;
-    Persona(string n) {
-        nombre = n;
+public:    
+    Persona(string nombre, int edad){
+        this-> nombre = nombre;
+        this-> edad = edad;
     }
     ~Persona(){
         cout << "destructor" << endl;
     }
+    void establecerNombre(string nombre) {
+        this->nombre = nombre;
+    }
+    void establecerEdad(int edad) {
+        this->edad = edad;
+    }
     void saludar() {
-        cout << nombre << endl;
+        cout << "Hola soy " << nombre << ", mi edad es " << edad << endl;
     }
 };
 
 int main() {
-    Persona *p = new Persona("Diana");
-    Persona *p2 = new Persona("Ximena");
+    Persona *p = new Persona("Diana", 25);
+   
+    /*
+    Persona *p2 = new Persona("Ximena", 26);
+    */
 
-    delete p2;
+    p->establecerNombre("Ximena");
+    p->establecerEdad(26);
 
     p -> saludar();
+    
+    /*
     p2 -> saludar();
+    */
 }
