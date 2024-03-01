@@ -6,11 +6,10 @@ class Persona {
 private:
     string nombre;
     int edad;
-public:    
-    Persona(string nombre, int edad){
-        this-> nombre = nombre;
-        this-> edad = edad;
-    }
+public: 
+    static int numero_personas;   
+    Persona(string nombre, int edad);
+
     ~Persona(){
         cout << "destructor" << endl;
     }
@@ -22,13 +21,25 @@ public:
         this->edad = edad;
         return *this;
     }
-    void saludar() {
-        cout << "Hola soy " << nombre << ", mi edad es " << edad << endl;
-    }
+    void saludar();
 };
+
+int Persona:: numero_personas = 0;
+void Persona::saludar() {
+    cout << "Hola soy " << nombre << ", mi edad es " << edad << endl;
+}
+
+Persona::Persona(string nombre, int edad){
+        this-> nombre = nombre;
+        this-> edad = edad;
+        numero_personas += 1;
+}
 
 int main() {
     Persona *p = new Persona("Diana", 25);
+    Persona *p2 = new Persona("Juana", 35);
+
+    cout << "Numero de personas: " << Persona::numero_personas << endl;
    
     /*
     Persona *p2 = new Persona("Ximena", 26);
