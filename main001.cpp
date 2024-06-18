@@ -30,13 +30,13 @@ void DrawMap(int HeroPosX, int HeroPosY, char Gamemap[5][5])
 
 int main()
 {
-    int HeroPosY = 1;
-    int HeroPosX = 1;
+    int HeroPosY = 0;
+    int HeroPosX = 0;
     bool isGameOver = false;
     char Input = ' ';
     char Gamemap[5][5] =
         {
-            {'_', '_', '_', '_', '_'},
+            {'3', '_', '_', '_', '_'},
             {'_', '_', '_', '_', '_'},
             {'_', '_', '_', '_', '_'},
             {'_', '_', '_', '_', '_'},
