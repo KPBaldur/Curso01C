@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iostream>
 #include <fstream>
 
 using namespace std;
@@ -12,28 +13,28 @@ int main()
     {
         MyFile << "Hola Mundo!" << endl;
         MyFile << "Mi nombre es: " << endl;
-
         cout << "Introduce el nombre de tu heroe: " << endl;
         cin >> PlayerName;
         MyFile << PlayerName;
     }
 
-    MyFile.close();*/
+    MyFile.close(); */
 
     ifstream MyFileRead("GameData.txt");
     string line;
     string NombreDelHeroe = "";
     int Reglon = 0;
-
+    
     if (MyFileRead.is_open())
     {
         while (getline(MyFileRead, line))
         {
-
-            if (Reglon == 3)
+            if(Reglon == 2)
             {
                 NombreDelHeroe = line;
             }
+
+            Reglon = Reglon + 1;
         }
     }
     else
@@ -41,7 +42,7 @@ int main()
         cout << "No logre abrir mi archivo, checar el antivirus!" << endl;
     }
 
-    cout << "Bienvenida a tu aventura:  " << endl;
+    cout << "Bienvenida a tu aventura: ";
     cout << NombreDelHeroe << endl;
 
     return 0;
