@@ -7,11 +7,17 @@ using namespace std;
 
 int main()
 {
-    float a = 2;
-    float b = 1;
+    int a = 0;
+    int b = 0;
+
+    cout << "Ingrese el primer numero: " << endl;
+    cin >> a;
+    cout << "Ingrese el segundo numero: " << endl;
+    cin >> b;
 
     int option = 0;
-    cout << "Ingresa una operacion: ";
+    cout << "Ingresa una operacion: " << endl;
+    cout << "1) Suma 2) Resta 3) Multiplicacion 4) Division" << endl;
     cin >> option;
     switch (option)
     {
