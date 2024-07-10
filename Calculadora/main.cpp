@@ -1,8 +1,6 @@
 #include <iostream>
 #include <cmath>
-/*#include "aritmetica.h"
-#include "aritmetica.cpp"
-*/
+
 using namespace std;
 
 int main()

@@ -5,10 +5,11 @@ class Aritmetica
 {
 
 public:
+    Aritmetica();
+    void CallOpcion();
 
 private:
-    Aritmetica
-
+    int a, b;
 };
 
 #endif
