@@ -6,9 +6,10 @@ int main()
 {
     int direccion = 4909;
 
-    int *PunteroDireccion;
+    int* PunteroDireccion;
 
     PunteroDireccion = &direccion;
+    
 
     cout << PunteroDireccion << endl;
 }
