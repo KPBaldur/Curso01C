@@ -7,7 +7,6 @@ int main()
 {
     
     ofstream MyFile("GameData.txt");
-    string PlayerName = "";
 
     if(MyFile.is_open())
     {
@@ -19,10 +18,15 @@ int main()
     MyFile.close();
 
     ifstream MyFileRead("GameData.txt");
+    string line;
 
     if(MyFileRead.is_open())
     {
-    
+        while (getline(MyFileRead, line))
+        {
+            cout << line << endl;
+        }
+
     } 
     return 0;
 }
