@@ -38,10 +38,6 @@ int main()
             Reglon = Reglon + 1;
         }
     } 
-    else 
-    {
-    cout << "Problemas de lectura, revisa el antivirus" << endl;
-    }
 
         cout << "Bienvenida a tu gran aventura! " << endl;
         cout << NombreDelHeroe;
